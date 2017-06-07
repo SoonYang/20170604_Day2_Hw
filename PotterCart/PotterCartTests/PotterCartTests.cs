@@ -17,11 +17,11 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 100m;
 
-            var actual = target.CalculateDealPrice(
-                new List<Book>
-                {
-                    new BookHarryPotter(1),
-                });
+            var books = new List<Book>();
+            books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
+
+            var actual = target
+                .CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -32,12 +32,12 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 190m;
 
-            var actual = target.CalculateDealPrice(
-                new List<Book>
-                {
-                    new BookHarryPotter(1),
-                    new BookHarryPotter(2),
-                });
+            var books = new List<Book>();
+            books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(2), 1));
+
+            var actual = target
+                .CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -48,13 +48,12 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 270m;
 
-            var actual = target.CalculateDealPrice(
-                new List<Book>
-                {
-                    new BookHarryPotter(1),
-                    new BookHarryPotter(2),
-                    new BookHarryPotter(3),
-                });
+            var books = new List<Book>();
+            books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(2), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(3), 1));
+
+            var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -65,14 +64,13 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 320m;
 
-            var actual = target.CalculateDealPrice(
-                new List<Book>
-                {
-                    new BookHarryPotter(1),
-                    new BookHarryPotter(2),
-                    new BookHarryPotter(3),
-                    new BookHarryPotter(4),
-                });
+            var books = new List<Book>();
+            books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(2), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(3), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(4), 1));
+
+            var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -83,15 +81,14 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 375m;
 
-            var actual = target.CalculateDealPrice(
-                new List<Book>
-                {
-                    new BookHarryPotter(1),
-                    new BookHarryPotter(2),
-                    new BookHarryPotter(3),
-                    new BookHarryPotter(4),
-                    new BookHarryPotter(5),
-                });
+            var books = new List<Book>();
+            books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(2), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(3), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(4), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(5), 1));
+
+            var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -102,14 +99,12 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 370m;
 
-            var actual = target.CalculateDealPrice(
-                new List<Book>
-                {
-                    new BookHarryPotter(1),
-                    new BookHarryPotter(2),
-                    new BookHarryPotter(3),
-                    new BookHarryPotter(3),
-                });
+            var books = new List<Book>();
+            books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(2), 1));
+            books.AddRange(Book.GetList(new BookHarryPotter(3), 2));
+
+            var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
