@@ -22,6 +22,22 @@ namespace PotterCart
         public virtual decimal Price { get; set; }
 
         /// <summary>
+        /// 成交價
+        /// </summary>
+        public decimal DealPrice
+        {
+            get
+            {
+                return Price * (100 - DiscountPercent) / 100;
+            }
+        }
+
+        /// <summary>
+        /// 折扣比例
+        /// </summary>
+        public decimal DiscountPercent { get; set; }
+
+        /// <summary>
         /// Get Book list.
         /// </summary>
         /// <param name="book">書本</param>
@@ -30,7 +46,11 @@ namespace PotterCart
         public static List<Book> GetList(Book book, int count)
         {
             var list = new List<Book>();
-            list.AddRange(Enumerable.Repeat(book, count));
+
+            for (int i = 0; i < count; i++)
+            {
+                list.Add(book.MemberwiseClone() as Book);
+            }
 
             return list;
         }
