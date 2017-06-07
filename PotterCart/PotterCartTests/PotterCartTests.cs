@@ -17,7 +17,7 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 100m;
 
-            var actual = target.CalculateFee(
+            var actual = target.CalculateDealPrice(
                 new List<Book>
                 {
                     new BookHarryPotter(1),
@@ -32,7 +32,7 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 190m;
 
-            var actual = target.CalculateFee(
+            var actual = target.CalculateDealPrice(
                 new List<Book>
                 {
                     new BookHarryPotter(1),
