@@ -6,8 +6,8 @@
     <ProjectGuid>{602FB37A-58DB-4C5A-AD86-843973BC8B7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PotterCartTests</RootNamespace>
-    <AssemblyName>PotterCartTests</AssemblyName>
+    <RootNamespace>BookStoreCartTests</RootNamespace>
+    <AssemblyName>BookStoreCartTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -51,13 +51,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="PotterCartTests.cs" />
+    <Compile Include="BookStoreCartTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PotterCart\PotterCart.csproj">
+    <ProjectReference Include="..\PotterCart\BookStoreCart.csproj">
       <Project>{DBE32C00-BB44-4DFC-9AAF-85807A160FA3}</Project>
-      <Name>PotterCart</Name>
+      <Name>BookStoreCart</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

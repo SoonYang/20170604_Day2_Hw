@@ -7,8 +7,8 @@
     <ProjectGuid>{DBE32C00-BB44-4DFC-9AAF-85807A160FA3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PotterCart</RootNamespace>
-    <AssemblyName>PotterCart</AssemblyName>
+    <RootNamespace>BookStoreCart</RootNamespace>
+    <AssemblyName>BookStoreCart</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="BookHarryPotter.cs" />
-    <Compile Include="PotterCart.cs" />
+    <Compile Include="BookStoreCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotterCart", "PotterCart\PotterCart.csproj", "{DBE32C00-BB44-4DFC-9AAF-85807A160FA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreCart", "PotterCart\BookStoreCart.csproj", "{DBE32C00-BB44-4DFC-9AAF-85807A160FA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotterCartTests", "PotterCartTests\PotterCartTests.csproj", "{602FB37A-58DB-4C5A-AD86-843973BC8B7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreCartTests", "PotterCartTests\BookStoreCartTests.csproj", "{602FB37A-58DB-4C5A-AD86-843973BC8B7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

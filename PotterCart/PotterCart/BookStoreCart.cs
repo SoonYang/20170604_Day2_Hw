@@ -6,7 +6,7 @@ namespace PotterCart
     /// <summary>
     /// 書店購物車
     /// </summary>
-    public class PotterCart
+    public class BookStoreCart
     {
         /// <summary>
         /// 計算成交價
