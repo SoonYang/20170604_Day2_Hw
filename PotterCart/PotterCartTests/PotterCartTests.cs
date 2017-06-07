@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PotterCart;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PotterCart.Tests
 {
@@ -20,8 +15,7 @@ namespace PotterCart.Tests
             var books = new List<Book>();
             books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
 
-            var actual = target
-                .CalculateDealPrice(books);
+            var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -36,8 +30,7 @@ namespace PotterCart.Tests
             books.AddRange(Book.GetList(new BookHarryPotter(1), 1));
             books.AddRange(Book.GetList(new BookHarryPotter(2), 1));
 
-            var actual = target
-                .CalculateDealPrice(books);
+            var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);
         }
@@ -131,7 +124,7 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 0m;
             var books = new List<Book>();
-            
+
             var actual = target.CalculateDealPrice(books);
 
             Assert.AreEqual(expected, actual);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PotterCart
 {
@@ -28,17 +24,30 @@ namespace PotterCart
         {
             get
             {
-                return Price * (100 - DiscountPercent) / 100;
+                return Price * (100 - _discountPercent) / 100;
             }
         }
 
         /// <summary>
+        /// 是否已計算折扣
+        /// </summary>
+        public bool IsCalculated { get; private set; }
+
+        private decimal _discountPercent;
+        /// <summary>
         /// 折扣比例
         /// </summary>
-        public decimal DiscountPercent { get; set; }
+        public decimal DiscountPercent
+        {
+            set
+            {
+                _discountPercent = value;
+                IsCalculated = true;        // 改成已計算折扣
+            }
+        }
 
         /// <summary>
-        /// Get Book list.
+        /// 取得 Book list
         /// </summary>
         /// <param name="book">書本</param>
         /// <param name="count">數量</param>
