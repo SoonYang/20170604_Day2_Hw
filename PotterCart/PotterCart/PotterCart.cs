@@ -8,7 +8,7 @@ namespace PotterCart
 {
     public class PotterCart
     {
-        public decimal CalculateFee()
+        public decimal CalculateFee(List<Book> books)
         {
             return 100m;
         }

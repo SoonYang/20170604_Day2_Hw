@@ -17,7 +17,11 @@ namespace PotterCart.Tests
             var target = new PotterCart();
             var expected = 100m;
 
-            var actual = target.CalculateFee();
+            var actual = target.CalculateFee(
+                new List<Book>
+                {
+                    new BookHarryPotter(1),
+                });
 
             Assert.AreEqual(expected, actual);
         }
@@ -25,7 +29,17 @@ namespace PotterCart.Tests
         [TestMethod()]
         public void 買1本第1集_1本第2集_合計_190元()
         {
-            Assert.Fail();
+            var target = new PotterCart();
+            var expected = 190m;
+
+            var actual = target.CalculateFee(
+                new List<Book>
+                {
+                    new BookHarryPotter(1),
+                    new BookHarryPotter(2),
+                });
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }
