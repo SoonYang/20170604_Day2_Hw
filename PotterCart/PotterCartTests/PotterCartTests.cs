@@ -124,5 +124,17 @@ namespace PotterCart.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void 買0本書_合計_0元()
+        {
+            var target = new PotterCart();
+            var expected = 0m;
+            var books = new List<Book>();
+            
+            var actual = target.CalculateDealPrice(books);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
