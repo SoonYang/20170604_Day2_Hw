@@ -58,5 +58,11 @@ namespace PotterCart.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void 買第1集_第2集_第3集_第四集_各1本_合計_320元()
+        {
+            Assert.Fail();
+        }
     }
 }
