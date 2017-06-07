@@ -62,7 +62,19 @@ namespace PotterCart.Tests
         [TestMethod()]
         public void 買第1集_第2集_第3集_第四集_各1本_合計_320元()
         {
-            Assert.Fail();
+            var target = new PotterCart();
+            var expected = 320m;
+
+            var actual = target.CalculateDealPrice(
+                new List<Book>
+                {
+                    new BookHarryPotter(1),
+                    new BookHarryPotter(2),
+                    new BookHarryPotter(3),
+                    new BookHarryPotter(4),
+                });
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }
