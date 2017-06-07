@@ -31,6 +31,8 @@ namespace PotterCart
                 discountPercent = 5;        // 2種 => 95折
             else if (distinctCount == 3)
                 discountPercent = 10;       // 3種 => 90折
+            else if (distinctCount == 4)
+                discountPercent = 20;       // 4種 => 80折
 
 
             // 成交價 = 總原價 * 折後比例
