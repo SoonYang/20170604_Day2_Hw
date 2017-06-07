@@ -10,7 +10,7 @@ namespace PotterCart
     {
         public decimal CalculateFee()
         {
-            throw new NotImplementedException();
+            return 100m;
         }
     }
 }
